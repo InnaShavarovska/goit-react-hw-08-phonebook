@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { InfinitySpin } from 'react-loader-spinner';
 
 import { fetchContacts } from '../redux/contacts/operations';
 import { ContactList } from 'components/contacts/ContactList';
@@ -23,16 +23,7 @@ const Contacts = () => {
       <ContactForm />
       <h2>Contacts</h2>
       <Filter />
-      {isLoading && !error && (
-        <Dna
-          visible={true}
-          height="80"
-          width="80"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper"
-        />
-      )}
+      {isLoading && !error && <InfinitySpin width="200" color="#4fa94d" />}
       <ContactList />
     </div>
   );

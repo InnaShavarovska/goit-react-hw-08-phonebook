@@ -16,14 +16,4 @@ export const Nav = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-size: 25px;
-
-  &:hover,
-  &:focus {
-    color: beige;
-    /* font-weight: bold; */
-  }
-
-  &.active {
-    color: beige;
-  }
 `;

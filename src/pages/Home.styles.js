@@ -2,18 +2,12 @@ import styled from 'styled-components';
 
 export const SectionHome = styled.section`
   h1 {
-    font-size: 55px;
-
-    &::first-letter {
-      color: beige;
-    }
+    font-size: 70px;
   }
 
   p {
     font-size: 20px;
+    text-align: center;
   }
-
-  span {
-    color: beige;
-  }
+}
 `;

@@ -7,9 +7,6 @@ export const UserTitle = styled.div`
 
   p {
     font-size: 22px;
-    &::first-letter {
-      color: beige;
-    }
   }
 
   button {
@@ -18,7 +15,7 @@ export const UserTitle = styled.div`
     border-radius: 5px;
     &:hover,
     &:focus {
-      background-color: beige;
+      background-color: black;
       color: #fff;
       cursor: pointer;
     }

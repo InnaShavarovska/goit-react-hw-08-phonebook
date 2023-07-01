@@ -11,7 +11,7 @@ export function Filter() {
 
   return (
     <FilterLabel>
-      Find contact by the name
+      Find contact by name
       <input type="text" name="filter" onChange={handlerFilter} />
     </FilterLabel>
   );

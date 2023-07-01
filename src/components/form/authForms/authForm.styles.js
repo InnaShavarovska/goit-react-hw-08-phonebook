@@ -24,7 +24,7 @@ export const Form = styled.form`
 
     &:hover,
     &:focus {
-      background-color: blue;
+      background-color: black;
       color: #fff;
       cursor: pointer;
     }

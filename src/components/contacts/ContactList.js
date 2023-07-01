@@ -4,22 +4,19 @@ import {
   selectContacts,
   selectContactsFilter,
 } from '../../redux/contacts/selectors';
-import { IoPersonOutline, IoClose } from 'react-icons/io5';
+import { IoClose } from 'react-icons/io5';
 import {
   ContactsList,
   ContactItem,
-  ContactIcon,
   ContactText,
   ContactDelete,
 } from './ContactList.styles';
 
-// компонент використовую список контактів з стору через useSelector
 export function ContactList() {
   const contacts = useSelector(selectContacts);
 
   const filterValue = useSelector(selectContactsFilter).toLowerCase();
 
-  // надсилання екшона видалення контакту за допомогою useDispatch
   const dispatch = useDispatch();
 
   const handleDelete = evt => {
@@ -42,15 +39,11 @@ export function ContactList() {
     <ContactsList>
       {visibilityContacts.map(contact => (
         <ContactItem key={contact.id}>
-          <ContactIcon>
-            <IoPersonOutline />
-          </ContactIcon>
           <ContactText>
             {contact.name}: <span>{contact.number}</span>
           </ContactText>
           <ContactDelete type="button" id={contact.id} onClick={handleDelete}>
             <IoClose />
-            {/* Delete */}
           </ContactDelete>
         </ContactItem>
       ))}

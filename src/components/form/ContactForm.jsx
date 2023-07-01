@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import { toast } from 'react-toastify';
 import { selectContacts } from '../../redux/contacts/selectors';
-import { IoPersonAdd } from 'react-icons/io5';
 import { Form, FormList, FormListItem, FormButton } from './ContactForm.styles';
 
 const ContactForm = () => {
@@ -53,10 +52,7 @@ const ContactForm = () => {
         </FormListItem>
       </FormList>
 
-      <FormButton type="submit">
-        <IoPersonAdd />
-        Add contact
-      </FormButton>
+      <FormButton type="submit">Add contact</FormButton>
     </Form>
   );
 };
